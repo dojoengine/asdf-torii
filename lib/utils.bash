@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-# This is the correct GitHub homepage where releases can be downloaded for katana.
-GH_REPO="https://github.com/dojoengine/katana"
-TOOL_NAME="katana"
-TOOL_TEST="katana --version"
+# This is the correct GitHub homepage where releases can be downloaded for torii.
+GH_REPO="https://github.com/dojoengine/torii"
+TOOL_NAME="torii"
+TOOL_TEST="torii --version"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
@@ -14,7 +14,7 @@ fail() {
 
 curl_opts=(-fsSL)
 
-# NOTE: You might want to remove this if katana is not hosted on GitHub releases.
+# NOTE: You might want to remove this if torii is not hosted on GitHub releases.
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
 	curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
 fi
@@ -116,12 +116,6 @@ get_binary_name() {
 	# Get platform and architecture information to determine file extension
 	read -r PLATFORM EXT ARCH <<<"$(detect_platform_arch)"
 
-	# Determine if we should use native build (defaults to non-native for compatibility)
-	BUILD=""
-	if [ "${ASDF_NATIVE_BUILD:-false}" = "true" ]; then
-		BUILD="_native"
-	fi
-
-	# i.e. katana_v1.6.3_darwin_arm64_native.tar.gz
-	echo "${TOOL_NAME}_v${version}_${PLATFORM}_${ARCH}${BUILD}.${EXT}"
+	# i.e. torii_v1.6.0_darwin_amd64.tar.gz
+	echo "${TOOL_NAME}_v${version}_${PLATFORM}_${ARCH}.${EXT}"
 }

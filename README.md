@@ -1,8 +1,8 @@
 <div align="center">
 
-# asdf-katana [![Build](https://github.com/dojoengine/asdf-katana/actions/workflows/build.yml/badge.svg)](https://github.com/dojoengine/asdf-katana/actions/workflows/build.yml) [![Lint](https://github.com/dojoengine/asdf-katana/actions/workflows/lint.yml/badge.svg)](https://github.com/dojoengine/asdf-katana/actions/workflows/lint.yml)
+# asdf-torii [![Build](https://github.com/dojoengine/asdf-torii/actions/workflows/build.yml/badge.svg)](https://github.com/dojoengine/asdf-torii/actions/workflows/build.yml) [![Lint](https://github.com/dojoengine/asdf-torii/actions/workflows/lint.yml/badge.svg)](https://github.com/dojoengine/asdf-torii/actions/workflows/lint.yml)
 
-[katana](https://book.dojoengine.org/toolchain/katana) plugin for the [asdf version manager](https://asdf-vm.com).
+[torii](https://book.dojoengine.org/toolchain/torii) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -16,32 +16,31 @@
 # Dependencies
 
 - `bash`, `curl`, `tar`, `unzip` and [POSIX utilities](https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html).
-- Optional: Set `ASDF_NATIVE_BUILD=true` environment variable to download native builds (optimized for your specific platform).
 
 # Install
 
 Plugin:
 
 ```shell
-asdf plugin add katana
+asdf plugin add torii
 # or
-asdf plugin add katana https://github.com/dojoengine/asdf-katana.git
+asdf plugin add torii https://github.com/dojoengine/asdf-torii.git
 ```
 
-katana:
+torii:
 
 ```shell
 # Show all installable versions
-asdf list all katana
+asdf list all torii
 
 # Install specific version
-asdf install katana latest
+asdf install torii latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global katana latest
+asdf global torii latest
 
-# Now katana commands are available
-katana --version
+# Now torii commands are available
+torii --version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
@@ -51,7 +50,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/dojoengine/asdf-katana/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/dojoengine/asdf-torii/graphs/contributors)!
 
 # License
 
